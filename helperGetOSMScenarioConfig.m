@@ -27,6 +27,7 @@ switch osmScenarioName
             -70  30];
 
         scenarioConfig.scattererMatFile = "open_area_osm_scatterers.mat";
+       
 
         % Common transmitter position
         txPosition = [-100; -60; 0];
@@ -49,6 +50,7 @@ switch osmScenarioName
             -50 50];
 
         scenarioConfig.scattererMatFile = "piotrkowska_osm_scatterers.mat";
+          
 
         % Common transmitter position
         txPosition = [-10; -40; 0];

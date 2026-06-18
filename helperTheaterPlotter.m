@@ -48,7 +48,7 @@ classdef helperTheaterPlotter
 
             obj.FrameBuffer = {};
         end
-
+       
         function plotTrajectories(obj, trajectories, t)
             n = numel(trajectories);
             trajectoryPositions = cell(1, n);
