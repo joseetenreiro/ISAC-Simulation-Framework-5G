@@ -66,6 +66,11 @@ function config = defaultConfig()
     config.trackerConfirmationExistenceProbability = 0.98;
     config.trackerMaxMahalanobisDistance = 10;
     config.trackerDetectionProbability = 0.9;
+    config.trackerVelocityVariance = 15^2 / 3;
+    config.trackerAccelerationVariance = 0.01^2 / 3;
+
+    config.trackerMaxMeasurementsPerUpdate = 10;
+    config.trackerRangeLimits = [0 500];
 
     %% Range-AoA processing
 
