@@ -6,30 +6,29 @@ function projectRoot = setupISACProjectPaths()
 %
 %   The function works regardless of where the repository is installed.
 
-projectRoot = fileparts(mfilename("fullpath"));
+    projectRoot = fileparts(mfilename("fullpath"));
 
-sourceDirectory = fullfile(projectRoot, "src");
-dataDirectory = fullfile(projectRoot, "data");
+    sourceDirectory = fullfile(projectRoot, "src");
+    dataDirectory = fullfile(projectRoot, "data");
 
-% Public entry points.
-addpath(projectRoot);
+    % Public entry points.
+    addpath(projectRoot);
 
-% Internal framework source files.
-if isfolder(sourceDirectory)
-    addpath(genpath(sourceDirectory));
-end
+    % Internal framework source files.
+    if isfolder(sourceDirectory)
+        addpath(genpath(sourceDirectory));
+    end
 
-% OSM scenario data.
-if isfolder(dataDirectory)
-    addpath(dataDirectory);
-end
+    % Scenario data.
+    if isfolder(dataDirectory)
+        addpath(dataDirectory);
+    end
 
-rehash;
+    rehash;
 
-if nargout == 0
-
-    fprintf( ...
-        "ISAC project configured from:\n%s\n", ...
-        projectRoot);
-end
+    if nargout == 0
+        fprintf( ...
+            "ISAC project configured from:\n%s\n", ...
+            projectRoot);
+    end
 end
