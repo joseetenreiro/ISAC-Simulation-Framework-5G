@@ -1588,5 +1588,20 @@ function results = runISACSimulation(config)
 
     results.simulationComplete = true;
     results.setupComplete = true;
+    %% Optional video export
 
+    results.videoPath = "";
+
+    if config.exportVideo
+
+        if ~config.storePlaybackFrames
+            error( ...
+                ["Video export requires stored playback frames. " ...
+                "Set config.storePlaybackFrames = true."]);
+        end
+
+        results.videoPath = exportISACVideo( ...
+            results, ...
+            config);
+    end
 end
