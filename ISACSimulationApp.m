@@ -10,7 +10,9 @@ function ISACSimulationApp
 %       - Review summary metrics
 %       - Open the interactive playback viewer
 %       - Export the stored frames as a video
+%% Configure project paths
 
+setupISACProjectPaths();
     %% Application state
 
     appResults = [];

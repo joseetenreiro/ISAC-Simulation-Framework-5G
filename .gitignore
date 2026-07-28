@@ -7,3 +7,7 @@ stored_outputs_rangeAoA_frames.pdf
 stored_outputs_rangeAoA_frames.png
 piotrkowska_osm_scenario_construction.pdf
 results/
+
+
+results/*
+!results/.gitkeep

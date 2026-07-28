@@ -3,7 +3,14 @@ function config = defaultConfig()
 %
 %   CONFIG = DEFAULTCONFIG() returns the default parameters used by the
 %   original validated baseline monostatic simulation.
+%% Portable project paths
 
+projectRoot = string(setupISACProjectPaths());
+%% Configuration structure
+
+config = struct();
+
+config.projectRoot = projectRoot;
     %% Scenario and topology
 
     config.scenarioName = "baseline";
@@ -45,11 +52,15 @@ function config = defaultConfig()
     config.numBaselineScatterers = 40;
     config.osmReflectionScale = 1.0;
 
-    config.openAreaScattererFile = ...
-        "open_area_osm_scatterers.mat";
+       config.openAreaScattererFile = fullfile( ...
+        projectRoot, ...
+        "data", ...
+        "open_area_osm_scatterers.mat");
 
-    config.piotrkowskaScattererFile = ...
-        "piotrkowska_osm_scatterers.mat";
+    config.piotrkowskaScattererFile = fullfile( ...
+        projectRoot, ...
+        "data", ...
+        "piotrkowska_osm_scatterers.mat");
 
     %% Detection and clustering
 
@@ -118,9 +129,11 @@ function config = defaultConfig()
     config.exportFigures = false;
     config.exportVideo = false;
 
-    config.outputDirectory = "results";
+        config.outputDirectory = fullfile( ...
+        projectRoot, ...
+        "results");
 
-    config.videoFileName = "isac_simulation.mp4";
+   config.videoFileName = "isac_simulation.avi";
     config.videoFrameRate = 5;
 
 end
