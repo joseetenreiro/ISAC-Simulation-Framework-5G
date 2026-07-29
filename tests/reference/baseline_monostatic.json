@@ -1,0 +1,96 @@
+{
+  "scenarioName": "baseline",
+  "topology": "monostatic",
+  "targetCase": "twoTargetsOriginalFast",
+  "meanTruthHitRate": 1,
+  "targetTruthHitRate": [
+    1,
+    1
+  ],
+  "meanTrackHitRate": 0.9,
+  "meanTrackHitRateNoInit": 1,
+  "meanTrackHitRatePrevTruth": 1,
+  "meanTrackPositionError": [
+    3.0421324730331727,
+    0.6259621466983325
+  ],
+  "meanTrackPositionErrorNoInit": [
+    3.0421324730331727,
+    0.6259621466983325
+  ],
+  "meanTrackPositionErrorPrevTruth": [
+    3.3836730315473553,
+    2.1326432028164928
+  ],
+  "meanNumDetections": 2,
+  "meanNumRawCFARDetections": 35.2,
+  "meanNumTracks": 1.8,
+  "totalTrackIDs": 2,
+  "totalFalseTracks": 0,
+  "numDetectionsPerFrame": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+  ],
+  "numTracksPerFrame": [
+    0,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+  ],
+  "trackPositionErrorPerFrame": [
+    [
+      null,
+      null
+    ],
+    [
+      0.10998275055562309,
+      1.4351942716540467
+    ],
+    [
+      0.89096213448220307,
+      0.60890665821431644
+    ],
+    [
+      1.5610473573814181,
+      0.2969199593508709
+    ],
+    [
+      2.3082331686963071,
+      0.26966931142321288
+    ],
+    [
+      2.8164690004472694,
+      0.63159225187146184
+    ],
+    [
+      3.4102117882348897,
+      0.39642641331795603
+    ],
+    [
+      4.3914124292152241,
+      0.60207354424737536
+    ],
+    [
+      5.42709624344428,
+      0.70845892496169294
+    ],
+    [
+      6.4637773848413405,
+      0.68441798524405917
+    ]
+  ]
+}
