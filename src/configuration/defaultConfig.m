@@ -115,7 +115,15 @@ config.projectRoot = projectRoot;
 
     % Target and track speed/heading comparison.
     config.showSpeedHeadingFigure = true;
+    %% Application integration
 
+    % Optional callback used by graphical interfaces to report simulation
+    % progress. The callback receives:
+    %
+    %   progressFraction, currentFrame, totalFrames, statusMessage
+    %
+    % It remains empty when the simulation is run from a script.
+    config.progressCallback = [];
     %% Playback storage for the future app
 
     % Store frame-by-frame information so the app can reproduce,
